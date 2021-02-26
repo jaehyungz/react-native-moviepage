@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Title from "./Title";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 
 const HorizontalSlider = ({ title, children }) => (
-  <>
+  <View>
     <Title title={title} />
     <ScrollView
       contentContainerStyle={{ padding: 10 }}
@@ -16,7 +16,7 @@ const HorizontalSlider = ({ title, children }) => (
       {/* horizontal 으로 scrollview의 가로정렬이 가능하다.*/}
       {/* showsHorizontalScrollIndicator 으로 가로스크롤 스크롤바를 안보여줄수있다 boolean */}
     </ScrollView>
-  </>
+  </View>
 );
 
 HorizontalSlider.propTypes = {

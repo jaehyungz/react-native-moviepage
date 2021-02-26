@@ -23,8 +23,8 @@ const Container = styled.View`
   padding: 0 10px;
 `;
 
-export default ({ loading, nowPlaying, popular, upcoming }) => (
-  <ScrollContainer loading={loading}>
+export default ({ refreshFn, loading, nowPlaying, popular, upcoming }) => (
+  <ScrollContainer loading={loading} refreshFn={refreshFn}>
     <>
       <SliderContainer>
         <Slider>
@@ -53,6 +53,7 @@ export default ({ loading, nowPlaying, popular, upcoming }) => (
               poster={movie.poster_path}
               title={movie.original_title}
               votes={movie.vote_average}
+              overview={movie.overview}
             ></Vertical>
           ))}
         </HorizontalSlider>

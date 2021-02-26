@@ -4,15 +4,19 @@ import PropTypes from "prop-types";
 
 const TextInput = styled.TextInput`
   background-color: white;
+  margin: 0 30px;
+  padding: 10px 10px;
+  border-radius: 15px;
+  margin-bottom: 50px;
 `;
 
 const Input = ({ placeholder, value, onChange, onSubmit }) => (
   <TextInput
-    placeholder={placeholder}
-    returnKeyType={"search"}
-    onChangeText={onChange}
     value={value}
+    onChangeText={onChange}
+    placeholder={placeholder}
     onSubmitEditing={onSubmit}
+    returnKeyType={"search"}
   />
 );
 
